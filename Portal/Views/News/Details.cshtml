@@ -1,0 +1,64 @@
+﻿@model Portal.Models.News
+
+@{
+    ViewBag.Title = "نمایش جزئیات خبر";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPublish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPublish)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Groups.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Groups.Title)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }, new {@class="btn btn-warning"}) |
+    @Html.ActionLink("بازگشت به فهرست", "Index", null, new { @class = "btn btn-default" })
+</p>

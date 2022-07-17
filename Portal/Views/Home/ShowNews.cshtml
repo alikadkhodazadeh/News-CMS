@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Portal.Models.News>
+
+@{
+    ViewBag.Title = "نمایش خبر های گروه " + ViewBag.GroupTitle;
+}
+
+<h2>@ViewBag.GroupTitle</h2>
+<hr />
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-12">
+            <h3>
+                <a href="/Home/NewsDetails/@item.Id">@item.Title</a>
+            </h3>
+            <p>تاریخ خبر : @item.CreatedOn.ToString("dddd d MMMM yyyy")</p>
+            <p>@item.ShortText</p>
+            @*<p>@item.Text</p>*@
+        </div>
+    }
+</div>
+
+

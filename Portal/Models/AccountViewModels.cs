@@ -5,8 +5,8 @@ namespace Portal.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [Display(Name = "آدرس ایمیل")]
         public string Email { get; set; }
     }
 
@@ -17,96 +17,105 @@ namespace Portal.Models
 
     public class SendCodeViewModel
     {
+        [Display(Name = "روش ارسال کد")]
         public string SelectedProvider { get; set; }
+
+        [Display(Name = "روش های ارسال کد")]
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
+
+        [Display(Name = "آدرس بازگشت")]
         public string ReturnUrl { get; set; }
+
+        [Display(Name = "مشخصات من را به خاطر بسپار")]
         public bool RememberMe { get; set; }
     }
 
     public class VerifyCodeViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public string Provider { get; set; }
 
-        [Required]
-        [Display(Name = "Code")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [Display(Name = "کد")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Remember this browser?")]
+        [Display(Name = "مشخصات من را به خاطر بسپار")]
         public bool RememberBrowser { get; set; }
 
+        [Display(Name = "مشخصات من را به خاطر بسپار")]
         public bool RememberMe { get; set; }
     }
 
     public class ForgotViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [Display(Name = "آدرس ایمیل")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [Display(Name = "آدرس ایمیل")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "کلمه عبور")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "مشخصات من را به خاطر بسپار")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "آدرس ایمیل")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [StringLength(100, ErrorMessage = "{0} میبایست حداقل {2} کاراکتر باشد.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "کلمه عبور")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "تایید کلمه عبور")]
+        [Compare("Password", ErrorMessage = "دو کلمه عبور وارد شده یکسان نیستند.")]
         public string ConfirmPassword { get; set; }
     }
 
     public class ResetPasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "آدرس ایمیل")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [StringLength(100, ErrorMessage = "{0} میبایست حداقل {2} کاراکتر باشد.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "کلمه عبور")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "تایید کلمه عبور")]
+        [Compare("Password", ErrorMessage = "دو کلمه عبور وارد شده یکسان نیستند.")]
         public string ConfirmPassword { get; set; }
 
+        [Display(Name = "کد")]
         public string Code { get; set; }
     }
 
     public class ForgotPasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "آدرس ایمیل")]
         public string Email { get; set; }
     }
 }

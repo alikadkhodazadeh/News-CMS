@@ -1,0 +1,10 @@
+﻿@model Portal.Models.News
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>@ViewBag.Title</h2>
+<p>تاریخ : @Model.CreatedOn.ToString("dddd d MMMM yyyy") - گروه : <a href="/home/ShowNews/@Model.GroupId">@Model.Groups.Title</a></p>
+<p>@Model.ShortText</p>
+<p>@Model.Text</p>

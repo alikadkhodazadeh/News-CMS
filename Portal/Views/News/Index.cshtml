@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Portal.Models.News>
+
+@{
+    ViewBag.Title = "فهرست";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+<p>
+    @Html.ActionLink("افزودن خبر", "Create", null, new {@class="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPublish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Groups.Title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPublish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Groups.Title)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id }, new { @class="btn btn-warning" }) |
+            @Html.ActionLink("جزئیات", "Details", new { id=item.Id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

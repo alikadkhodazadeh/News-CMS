@@ -171,11 +171,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\PersianCulture.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Groups.cs">
       <DependentUpon>NewsDB.tt</DependentUpon>
@@ -209,6 +212,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\persian_fonts_override.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -236,6 +240,42 @@
     <Content Include="Models\NewsDB.edmx.diagram">
       <DependentUpon>NewsDB.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\persian_fonts\sahel\Sahel-Black-FD.eot" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-Black-FD.ttf" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-Black-FD.woff" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-Black-FD.woff2" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-Bold-FD.eot" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-Bold-FD.ttf" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-Bold-FD.woff" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-Bold-FD.woff2" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-FD.eot" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-FD.ttf" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-FD.woff" />
+    <Content Include="Content\persian_fonts\sahel\Sahel-FD.woff2" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Black-FD.eot" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Black-FD.ttf" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Black-FD.woff" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Black-FD.woff2" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Bold-FD.eot" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Bold-FD.ttf" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Bold-FD.woff" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Bold-FD.woff2" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-FD.eot" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-FD.ttf" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-FD.woff" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-FD.woff2" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Light-FD.eot" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Light-FD.ttf" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Light-FD.woff" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Light-FD.woff2" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Medium-FD.eot" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Medium-FD.ttf" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Medium-FD.woff" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Medium-FD.woff2" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Thin-FD.eot" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Thin-FD.ttf" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Thin-FD.woff" />
+    <Content Include="Content\persian_fonts\vazir\Vazir-Thin-FD.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -281,6 +321,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Groups\Create.cshtml" />
+    <Content Include="Views\Groups\Delete.cshtml" />
+    <Content Include="Views\Groups\Details.cshtml" />
+    <Content Include="Views\Groups\Edit.cshtml" />
+    <Content Include="Views\Groups\Index.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Shared\_GroupsPartial.cshtml" />
+    <Content Include="Views\Home\ShowNews.cshtml" />
+    <Content Include="Views\Home\NewsDetails.cshtml" />
+    <Content Include="Views\Shared\_ManagePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
